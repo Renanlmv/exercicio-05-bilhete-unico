@@ -6,7 +6,7 @@ public class BilheteUnico {
     long numero;
     Usuario usuario;
 
-    public BilheteUnico(String nome, long cpf, String perfil){
+    public BilheteUnico(String nome, long cpf, String perfil) {
         Random random = new Random();
         numero = random.nextLong(1000, 10000);
         usuario = new Usuario(nome, cpf, perfil);
@@ -24,7 +24,7 @@ public class BilheteUnico {
 
     // método para passar na catraca
     public String passagemCatraca() {
-        double debito = TARIFA/2;
+        double debito = TARIFA / 2;
         if (usuario.perfil.equalsIgnoreCase("comum")) {
             debito = TARIFA;
         }
