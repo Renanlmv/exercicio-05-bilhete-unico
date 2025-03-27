@@ -6,6 +6,7 @@ public class BilheteUnico {
     long numero;
     Usuario usuario;
 
+    // método construtor para gerar um bilhete
     public BilheteUnico(String nome, long cpf, String perfil) {
         Random random = new Random();
         numero = random.nextLong(1000, 10000);
@@ -30,8 +31,8 @@ public class BilheteUnico {
         }
         if (saldo >= debito) {
             saldo -= debito;
-            return "catraca liberada";
+            return "Catraca liberada";
         }
-        return "saldo insuficiente";
+        return "Saldo insuficiente!";
     }
 }
